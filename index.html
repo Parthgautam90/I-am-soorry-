@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To My Bestie</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ff758c, #ffc3a0);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      animation: backgroundPulse 6s infinite alternate;
+    }
+
+    @keyframes backgroundPulse {
+      0% {
+        background: linear-gradient(135deg, #ff758c, #ffc3a0);
+      }
+      50% {
+        background: linear-gradient(135deg, #ff9a9e, #fecfef);
+      }
+      100% {
+        background: linear-gradient(135deg, #ff758c, #ffc3a0);
+      }
+    }
+
+    .container {
+      width: 90%;
+      max-width: 700px;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #ff5c8d;
+      text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+      margin-bottom: 20px;
+      animation: titleGlow 2s infinite alternate;
+    }
+
+    @keyframes titleGlow {
+      from {
+        text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+      }
+      to {
+        text-shadow: 0 3px 20px rgba(255, 92, 141, 0.6);
+      }
+    }
+
+    .apology {
+      font-size: 1.2rem;
+      color: #333;
+      margin-bottom: 25px;
+      line-height: 1.6;
+      font-style: italic;
+      background: rgba(255, 224, 230, 0.6);
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .instruction {
+      font-size: 1rem;
+      color: #444;
+      margin-bottom: 20px;
+      font-weight: bold;
+      animation: fadeIn 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0.6;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      font-size: 1rem;
+      color: white;
+      background: linear-gradient(90deg, #ff5c8d, #ff709c);
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease;
+      animation: bounce 1.5s infinite alternate;
+    }
+
+    .btn:hover {
+      background: linear-gradient(90deg, #ff799d, #ff5c8d);
+      transform: scale(1.1);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    @keyframes bounce {
+      from {
+        transform: translateY(0px);
+      }
+      to {
+        transform: translateY(-5px);
+      }
+    }
+
+    .shayari {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #ff5c8d;
+      padding: 20px;
+      background: rgba(255, 224, 230, 0.9);
+      border: 2px dashed #ff799d;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      display: none;
+      animation: reveal 1s ease-in-out forwards;
+    }
+
+    @keyframes reveal {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 1rem;
+      color: #555;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .apology {
+        font-size: 1rem;
+        padding: 10px;
+      }
+
+      .instruction {
+        font-size: 0.9rem;
+      }
+
+      .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+      }
+
+      .shayari {
+        font-size: 1rem;
+        padding: 15px;
+      }
+
+      .footer {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>To My Bestie</h1>
+    <h1>Dear Varshuu</h1>
+    <p class="apology">
+      I know I’ve made mistakes, and I truly regret them. <br>
+      You are so special to me, and I don’t want to lose you. <br>
+      Please forgive me, and let’s rebuild the happiness we’ve always shared. <br>
+      I miss the bond we have, and I promise to make things right.
+      Today I see you with open hairs and hoddy , You are looking soo 
+      beutyfull.
+          You are always beautyfull My Choti Naak
+    </p>
+    <p class="instruction">Click the button to see the shayari I wrote for you:</p>
+    <button class="btn" onclick="showShayari()">See</button>
+
+    <div class="shayari" id="shayari">
+      <p>
+        हर दोस्ती खास होती है,<br>
+        पर तेरी बात कुछ और है।<br>
+        तू हंसे तो खुशियां बिखर जाए,<br>
+        तू रूठे तो दिल बेकरार हो जाए।<br>
+      </p>
+    </div>
+
+    <div class="footer">
+      <p>Still waiting for you...</p>
+    </div>
+  </div>
+
+  <script>
+    function showShayari() {
+      const shayariDiv = document.getElementById('shayari');
+      shayariDiv.style.display = 'block'; // Display the shayari with animation
+    }
+  </script>
+</body>
+</html>
